@@ -30,7 +30,13 @@ class App extends Component {
   }
 
   updateContact = (id, incommingContact) => {
-
+    const updatedContacts = this.state.contacts.map( c => {
+      if (c.id === id) {
+        return incommingContact
+      }
+      return c
+    })
+    this.setState({ contacts: updatedContacts })
   }
 
   render() {

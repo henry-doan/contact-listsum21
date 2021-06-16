@@ -29,14 +29,14 @@ const App = ({}) => {
 
   const updateContact = (id, incommingContact) => {
     const updatedContacts = contacts.map( c =>  {
-      if (c.id == id) {
+      if (c.id === id) {
         return incommingContact
       }
       return c
     })
     setContacts(updatedContacts)
   }
-  
+
   return (
     <>
       <h1>React Contact List!</h1>
